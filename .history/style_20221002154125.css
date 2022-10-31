@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+body {
+  line-height: 1.5;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.outstanding{
+    padding: 100px 0px;
+    background: url("//theme.hstatic.net/200000492415/1000859563/14/bgourclass.jpg?v=637") no-repeat;
+    background-size: cover;
+}
+.outstanding-heading{
+    
+    position: relative;
+    /* margin: 0 auto; */
+}
+.outstanding-heading__title{
+    color: white;
+    font-size: 1.5rem;
+    /* position:absolute; */
+    text-align: center;
+    /* line-height: 5rem; */ 
+}
+.outstanding-heading::after{
+  content: " ";
+  display: flex;
+  margin: 0 auto;
+  border: solid #fff;
+  width: 4rem;
+  height: 2px;
+  margin-top: 1rem;
+}
+
+.outstanding-list{
+  display: flex;
+  justify-content: space-between;
+}
+.outstanding-item{
+  /* padding: 1rem; */
+  margin: 1rem 0px;
+  /* padding: 0.5rem; */
+  flex-basics: 25% ;
+
+}
