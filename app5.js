@@ -1,65 +1,14 @@
-// window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollFunction()};
 
-// function scrollFunction() {
-//     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-//         document.getElementById("h_top").style.top = "-100px";
-//         document.getElementById("h_bottom").style.top = "-100px";
-//       } else {
-//         document.getElementById("h_top").style.top = "auto";
-//         document.getElementById("h_bottom").style.top = "auto";
-//       }
-// }
-
-
-// header scroll
-window.addEventListener("scroll",function(){
-   
-  var headerContact= document.querySelector(".header-contact__list");
-  var headerBottom= document.querySelector(".header-bottom");
-  var headerWrap=document.querySelector(".header-wrap");
-  headerContact.classList.toggle("scroll-hidden",window.scrollY>0);
-  headerBottom.classList.toggle("scroll-sticky",window.scrollY>0);
-  headerWrap.classList.toggle("scroll-header",window.scrollY>0);
-  
-})
-
-
-// menu link hover effect scroll
-window.addEventListener("load", function(){
-  const link1s= [...document.querySelectorAll(".header-nav_link")];
-  
-  // console.log(links);
-  link1s.forEach( (item) => item.addEventListener("mouseenter", handleHoverLink1));
-
-  const line= document.querySelector(".line-effect");
-
-  // scroll
-  function handleHoverLink1(event){
-      const {left, top, width, height, right}= event.target.getBoundingClientRect();
-      // console.log({left,top,width,height,right});
-      const offsetLeft= event.target.offsetLeft;
-      const offsetTop= event.target.offsetTop;
-      // console.log(offsetTop);
-      // console.log(offsetLeft);
-      if(window.scrollY <=0){
-          line.style.width= `${width}px`;
-          line.style.left= `${left}px`;
-          line.style.top= `${top + offsetTop*4}px`;
+function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("h_top").style.top = "-100px";
+        document.getElementById("h_bottom").style.top = "-100px";
+      } else {
+        document.getElementById("h_top").style.top = "auto";
+        document.getElementById("h_bottom").style.top = "auto";
       }
-      else{
-      line.style.width= `${width}px`;
-      line.style.left= `${offsetLeft}px`;
-      line.style.top= `${top +top/2}px`;
-      }
-  }
-  const nav= document.querySelector(".header-nav");
-  nav.addEventListener("mouseleave", function(){
-      line.style.width=0;
-  })
-
-})
-
-
+}
 
 //modal giỏ hàng
 let list = document.querySelectorAll('.list .item');
